@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Milestone:</strong>
+  <%= @feedback.milestone %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @feedback.description %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @feedback.completed %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Milestones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mentor</th>
+      <th>Mentee</th>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @milestones.each do |milestone| %>
+      <tr>
+        <td><%= milestone.mentor_id %></td>
+        <td><%= milestone.mentee_id %></td>
+        <td><%= milestone.name %></td>
+        <td><%= link_to 'Show', milestone %></td>
+        <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
+        <td><%= link_to 'Destroy', milestone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Milestone', new_milestone_path %>
