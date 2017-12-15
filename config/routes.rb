@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :milestones
   resources :users
   resources :organizations
+
+  root 'home#page'
 end
